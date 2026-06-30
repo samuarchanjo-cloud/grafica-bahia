@@ -5,6 +5,13 @@ import { motion } from 'framer-motion';
 import { Phone, MapPin, Clock, MessageCircle, ChevronRight } from 'lucide-react';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import logoMegaColor from './assets/logo-mega-color.png';
+import adesivoPerfurado from '../servicos-oferecidos/adesivo-perfurado.png';
+import adesivosDeVinil from '../servicos-oferecidos/adesivos-de-vinil.png';
+import cartaoDeVisita from '../servicos-oferecidos/cartao-de-visita.png';
+import fachadasEmAcm from '../servicos-oferecidos/fachadas-em-acm.png';
+import instalacaoDeBanner from '../servicos-oferecidos/instalacao-de-banner.png';
+import letrasEmAltoRelevo from '../servicos-oferecidos/letras-em-alto-relevo.png';
+import placasDirecionais from '../servicos-oferecidos/placas-direcionais.png';
 
 const GraficaMegaColorSite = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -57,12 +64,13 @@ const GraficaMegaColorSite = () => {
   ];
 
   const portfolio = [
-    { id: 1, title: 'Fachadas em ACM', category: 'Fachadas' },
-    { id: 2, title: 'Adesivos Vinil', category: 'Adesivos' },
-    { id: 3, title: 'Instalação de Banner', category: 'Lonas' },
-    { id: 4, title: 'Letras em Alto Relevo', category: 'Letreiros' },
-    { id: 5, title: 'Adesivo Perfurado', category: 'Adesivos' },
-    { id: 6, title: 'Placas Direcionais', category: 'Placas' },
+    { id: 1, title: 'Fachadas em ACM', category: 'Fachadas', image: fachadasEmAcm },
+    { id: 2, title: 'Adesivos de Vinil', category: 'Adesivos', image: adesivosDeVinil },
+    { id: 3, title: 'Instalação de Banner', category: 'Lonas', image: instalacaoDeBanner },
+    { id: 4, title: 'Letras em Alto Relevo', category: 'Letreiros', image: letrasEmAltoRelevo },
+    { id: 5, title: 'Adesivo Perfurado', category: 'Adesivos', image: adesivoPerfurado },
+    { id: 6, title: 'Placas Direcionais', category: 'Placas', image: placasDirecionais },
+    { id: 7, title: 'Cartão de Visitas', category: 'Identidade Visual', image: cartaoDeVisita },
   ];
 
   const features = [
@@ -275,7 +283,7 @@ const GraficaMegaColorSite = () => {
               >
                 <div className="relative w-full h-64 bg-gradient-to-br from-[#E91E8C] to-[#00A9E0] overflow-hidden">
                   <img
-                    src={`https://picsum.photos/400/600?random=${item.id}`}
+                    src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
